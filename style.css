@@ -1,0 +1,1670 @@
+
+/* ========================================
+   ANIME'LAR DUNYOSI
+   RENKLİ ANİME WEB SİTESİ
+   HTML + CSS
+======================================== */
+
+/* GENEL AYARLAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #ff65b5;
+    --purple: #9664ff;
+    --blue: #58b9ff;
+    --orange: #ff9b50;
+    --yellow: #ffe36b;
+    --green: #62d9a5;
+    --dark: #29213f;
+    --text: #514966;
+    --light: #fff9ff;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fffaff;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+section {
+    scroll-margin-top: 95px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading > span {
+    display: inline-block;
+    padding: 9px 20px;
+    background: #ffe4f3;
+    color: #e34a9e;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 43px);
+    margin-bottom: 12px;
+    color: #332346;
+}
+
+.section-heading p {
+    color: #897c9c;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   ÜST MENÜ
+======================================== */
+
+.site-header {
+    width: 100%;
+    min-height: 82px;
+    padding: 15px 5%;
+    background: rgba(255, 255, 255, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 25px rgba(91, 51, 116, 0.08);
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        #ff78bb,
+        #a77bff,
+        #5bc7ff,
+        #7de5b4,
+        #ffe36b
+    ) 1;
+}
+
+.logo {
+    color: #e34a9e;
+    font-size: 23px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #9360e8;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    flex-wrap: wrap;
+}
+
+.main-menu a {
+    color: #61536e;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-menu a:hover {
+    color: #ed5aa9;
+    transform: translateY(-3px);
+}
+
+.menu-button {
+    background: linear-gradient(120deg, #ff65b5, #9865ed);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 7px 18px rgba(191, 85, 194, 0.2);
+    transition: 0.3s;
+}
+
+.menu-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(191, 85, 194, 0.3);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 610px;
+    padding: 90px 9%;
+    background:
+        radial-gradient(circle at 85% 20%, #f4dfff 0, transparent 28%),
+        radial-gradient(circle at 5% 85%, #ffe0ef 0, transparent 30%),
+        linear-gradient(130deg, #fff8fc, #f7f0ff, #edf8ff);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 670px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #e24d9c;
+    background: #ffe4f3;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.12;
+    color: #32213f;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(
+        90deg,
+        #ff65ad,
+        #a16aff,
+        #48baff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-content > p {
+    color: #81738e;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 560px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: linear-gradient(120deg, #ff65b5, #a36aff);
+    color: white;
+    box-shadow: 0 8px 20px rgba(180, 91, 192, 0.2);
+}
+
+.secondary-button {
+    color: #9161d7;
+    background: white;
+    border: 2px solid #e9d8ff;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-5px);
+}
+
+.hero-small-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.hero-small-info span {
+    background: white;
+    color: #8a6ba6;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 12px;
+    box-shadow: 0 4px 15px rgba(90, 60, 120, 0.06);
+}
+
+.hero-decoration {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-big-emoji {
+    font-size: clamp(130px, 20vw, 230px);
+    filter: drop-shadow(0 15px 20px rgba(145, 95, 190, 0.16));
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-card {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background: white;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(100, 64, 130, 0.13);
+    transform: rotate(-4deg);
+}
+
+.hero-card span {
+    font-size: 30px;
+}
+
+.hero-card h3 {
+    color: #a45ce4;
+    margin: 5px 0;
+}
+
+.hero-card p {
+    font-size: 12px;
+    color: #9988a9;
+}
+
+.floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.circle-one {
+    width: 75px;
+    height: 75px;
+    background: #ffe0f0;
+    top: 30px;
+    left: 20px;
+    font-size: 35px;
+}
+
+.circle-two {
+    width: 65px;
+    height: 65px;
+    background: #e7ddff;
+    top: 75px;
+    right: 15px;
+    font-size: 30px;
+    animation-delay: 0.8s;
+}
+
+.circle-three {
+    width: 60px;
+    height: 60px;
+    background: #dff5ff;
+    bottom: 65px;
+    left: 10px;
+    font-size: 30px;
+    animation-delay: 1.4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* ========================================
+   İSTATİSTİK KUTULARI
+======================================== */
+
+.statistics {
+    padding: 45px 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: white;
+}
+
+.stat-box {
+    padding: 27px 15px;
+    text-align: center;
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-7px);
+}
+
+.stat-box > span {
+    font-size: 35px;
+}
+
+.stat-box h2 {
+    font-size: 20px;
+    margin: 12px 0 5px;
+}
+
+.stat-box p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.pink {
+    background: #ffe8f4;
+    color: #d84b99;
+}
+
+.purple {
+    background: #efe6ff;
+    color: #8654d9;
+}
+
+.blue {
+    background: #e4f4ff;
+    color: #438cc5;
+}
+
+.orange {
+    background: #fff0df;
+    color: #d98737;
+}
+
+
+/* ========================================
+   GİRİŞ BÖLÜMÜ
+======================================== */
+
+.intro-section {
+    padding: 100px 8%;
+    background: #fffaff;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.intro-card {
+    padding: 35px 28px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-9px);
+}
+
+.intro-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.intro-card h3 {
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+
+.intro-card p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #81758d;
+}
+
+.intro-pink {
+    background: #fff0f8;
+}
+
+.intro-purple {
+    background: #f2edff;
+}
+
+.intro-blue {
+    background: #eaf7ff;
+}
+
+
+/* ========================================
+   KATEGORİLER
+======================================== */
+
+.categories-section {
+    padding: 100px 8%;
+    background: linear-gradient(140deg, #fff1f8, #f5efff, #effaff);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    padding: 30px 20px;
+    border-radius: 22px;
+    text-align: center;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.category-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: white;
+    box-shadow: 0 12px 25px rgba(90, 65, 130, 0.09);
+}
+
+.category-card > span {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.cat-red {
+    background: #ffe6e9;
+    color: #d9586b;
+}
+
+.cat-purple {
+    background: #eee5ff;
+    color: #8655d5;
+}
+
+.cat-blue {
+    background: #e4f4ff;
+    color: #438ac0;
+}
+
+.cat-yellow {
+    background: #fff7d8;
+    color: #bd8b25;
+}
+
+.cat-pink {
+    background: #ffe8f4;
+    color: #db5b9c;
+}
+
+.cat-green {
+    background: #e4fff2;
+    color: #36a879;
+}
+
+.cat-dark {
+    background: #e9e8ff;
+    color: #6354ac;
+}
+
+.cat-orange {
+    background: #fff0e3;
+    color: #d98543;
+}
+
+
+/* ========================================
+   ANİME KARTLARI
+======================================== */
+
+.anime-section {
+    padding: 105px 7%;
+    background: white;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.anime-card {
+    background: white;
+    border-radius: 23px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(71, 47, 96, 0.08);
+    border: 1px solid #f2e9f7;
+    transition: 0.35s;
+}
+
+.anime-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 35px rgba(104, 65, 130, 0.15);
+}
+
+.anime-poster {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.anime-poster::before,
+.anime-poster::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+}
+
+.anime-poster::before {
+    top: -70px;
+    left: -50px;
+}
+
+.anime-poster::after {
+    bottom: -90px;
+    right: -50px;
+}
+
+.poster-number {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.poster-emoji {
+    font-size: 65px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 7px 8px rgba(0,0,0,0.15));
+    transition: 0.3s;
+}
+
+.anime-card:hover .poster-emoji {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.poster-title {
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.poster-mha {
+    background: linear-gradient(135deg, #f7a93f, #e94d6d, #7046a6);
+}
+
+.poster-naruto {
+    background: linear-gradient(135deg, #ffb34b, #ef713b, #d94c38);
+}
+
+.poster-jjk {
+    background: linear-gradient(135deg, #20204c, #4c4795, #9b70c9);
+}
+
+.poster-ds {
+    background: linear-gradient(135deg, #2b8c94, #5bc7c0, #2b486b);
+}
+
+.poster-onepiece {
+    background: linear-gradient(135deg, #54b6db, #397bc3, #e3a75e);
+}
+
+.poster-spy {
+    background: linear-gradient(135deg, #f6a7c9, #e875a0, #8c70ca);
+}
+
+.poster-haikyuu {
+    background: linear-gradient(135deg, #ef8d3c, #e45c3e, #f5c55b);
+}
+
+.poster-deathnote {
+    background: linear-gradient(135deg, #252638, #47445e, #9d8ba8);
+}
+
+.poster-tokyo {
+    background: linear-gradient(135deg, #32365d, #8b4d85, #df718c);
+}
+
+.poster-fma {
+    background: linear-gradient(135deg, #c08a4a, #805c49, #d8c08a);
+}
+
+.poster-aot {
+    background: linear-gradient(135deg, #647b78, #4a6159, #a8a47b);
+}
+
+.poster-sailor {
+    background: linear-gradient(135deg, #f57fc4, #8d6fd2, #4c8ed4);
+}
+
+.poster-chainsaw {
+    background: linear-gradient(135deg, #c83b3b, #ed793e, #5a253c);
+}
+
+.poster-blue {
+    background: linear-gradient(135deg, #1f5fa5, #47a8df, #a2d6ec);
+}
+
+.poster-fruits {
+    background: linear-gradient(135deg, #e8b46d, #e68c9d, #a67bbd);
+}
+
+.poster-violet {
+    background: linear-gradient(135deg, #8573b9, #c3a2df, #e8c6dd);
+}
+
+.poster-mob {
+    background: linear-gradient(135deg, #4a8b9d, #7468c9, #a47cc9);
+}
+
+.poster-inuyasha {
+    background: linear-gradient(135deg, #9b4a52, #c77983, #e4ad82);
+}
+
+.poster-conan {
+    background: linear-gradient(135deg, #234b73, #4d84ae, #a8c5db);
+}
+
+.poster-kuroko {
+    background: linear-gradient(135deg, #3679c1, #6f72ca, #d0a9e8);
+}
+
+.anime-info {
+    padding: 21px;
+}
+
+.anime-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.tag-action {
+    background: #ffe3e6;
+    color: #d64c61;
+}
+
+.tag-adventure {
+    background: #e1f3ff;
+    color: #4287b8;
+}
+
+.tag-fantasy {
+    background: #eee4ff;
+    color: #8954ce;
+}
+
+.tag-comedy {
+    background: #fff5d9;
+    color: #b88b29;
+}
+
+.tag-sports {
+    background: #dcf8eb;
+    color: #329a69;
+}
+
+.tag-mystery {
+    background: #e8e8ff;
+    color: #6259ad;
+}
+
+.tag-drama {
+    background: #ffe7f2;
+    color: #d05b9b;
+}
+
+.anime-info h3 {
+    font-size: 17px;
+    margin-bottom: 11px;
+    color: #3a2c4c;
+}
+
+.anime-info > p {
+    color: #8b8095;
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 67px;
+}
+
+.anime-details {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.anime-details span {
+    font-size: 10px;
+    padding: 7px 9px;
+    border-radius: 8px;
+    background: #f8f3fb;
+    color: #82728e;
+}
+
+.detail-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background: linear-gradient(100deg, #f36bac, #9871ed);
+    transition: 0.3s;
+}
+
+.detail-button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   ANİME BİLGİ PENCERELERİ
+======================================== */
+
+.anime-details-section {
+    padding: 70px 8%;
+    background: #fbf6ff;
+}
+
+.info-panel {
+    display: none;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 40px;
+    border-radius: 25px;
+    background: white;
+    border: 2px solid #f0dcff;
+    box-shadow: 0 12px 35px rgba(99, 60, 130, 0.1);
+    scroll-margin-top: 110px;
+}
+
+.info-panel:target {
+    display: block;
+    animation: showPanel 0.35s ease;
+}
+
+@keyframes showPanel {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-panel > span {
+    color: #d653a2;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info-panel h2 {
+    font-size: 32px;
+    color: #49305f;
+    margin: 15px 0;
+}
+
+.info-panel p {
+    color: #7e718b;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.close-panel {
+    float: right;
+    background: #ffe7f3;
+    color: #d54e99;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   DAHA FAZLA ANİME
+======================================== */
+
+.more-anime-section {
+    padding: 100px 8%;
+    background: white;
+}
+
+.more-anime-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.mini-anime {
+    padding: 25px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff0f8, #f2edff);
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #f2e8fa;
+}
+
+.mini-anime:nth-child(3n + 2) {
+    background: linear-gradient(135deg, #eaf7ff, #f1eaff);
+}
+
+.mini-anime:nth-child(3n) {
+    background: linear-gradient(135deg, #fff5e5, #ffeaf4);
+}
+
+.mini-anime:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(93, 60, 120, 0.1);
+}
+
+.mini-anime span {
+    font-size: 38px;
+}
+
+.mini-anime h3 {
+    font-size: 15px;
+    margin: 13px 0 7px;
+    color: #584267;
+}
+
+.mini-anime p {
+    color: #9a86a5;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   KARAKTER GALERİSİ
+======================================== */
+
+.characters-section {
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #fff5fb, #f3efff, #eefaff);
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.character-card {
+    text-align: center;
+    padding: 28px 20px;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(90, 65, 115, 0.06);
+    transition: 0.3s;
+    border: 1px solid #f4edf8;
+}
+
+.character-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.character-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    font-size: 42px;
+    background: linear-gradient(135deg, #ffe4f3, #e8ddff);
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(120, 80, 160, 0.12);
+}
+
+.character-card > span {
+    color: #b16cba;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.character-card h3 {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #483452;
+}
+
+.character-card p {
+    color: #908397;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.character-pink {
+    border-bottom: 4px solid #ff8fc8;
+}
+
+.character-orange {
+    border-bottom: 4px solid #ffb15f;
+}
+
+.character-blue {
+    border-bottom: 4px solid #69c5f3;
+}
+
+.character-purple {
+    border-bottom: 4px solid #a88bff;
+}
+
+.character-green {
+    border-bottom: 4px solid #71d7a7;
+}
+
+.character-red {
+    border-bottom: 4px solid #f17c83;
+}
+
+.character-aqua {
+    border-bottom: 4px solid #70d4d3;
+}
+
+.character-gold {
+    border-bottom: 4px solid #f1c45d;
+}
+
+.character-dark {
+    border-bottom: 4px solid #7770ad;
+}
+
+
+/* ========================================
+   TÜR AÇIKLAMALARI
+======================================== */
+
+.genre-details {
+    padding: 100px 8%;
+    background: white;
+}
+
+.genre-list {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.genre-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: #fff7fc;
+    border-radius: 20px;
+    border: 1px solid #f5eaf5;
+    transition: 0.3s;
+    scroll-margin-top: 110px;
+}
+
+.genre-item:hover {
+    background: #f5efff;
+    transform: translateX(5px);
+}
+
+.genre-symbol {
+    min-width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 18px;
+    font-size: 30px;
+}
+
+.genre-item h3 {
+    color: #654577;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.genre-item p {
+    color: #908399;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   JAPON KÜLTÜRÜ
+======================================== */
+
+.culture-section {
+    padding: 100px 9%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(130deg, #fff0f8, #f0ebff, #eaf8ff);
+    overflow: hidden;
+}
+
+.culture-content > span {
+    display: inline-block;
+    background: white;
+    color: #d85d9f;
+    padding: 10px 17px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.culture-content h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    color: #453052;
+    margin-bottom: 20px;
+}
+
+.culture-content p {
+    color: #84768f;
+    line-height: 1.9;
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.culture-content .primary-button {
+    margin-top: 15px;
+}
+
+.culture-art {
+    min-height: 380px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.culture-circle {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    font-size: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb9dd, #c5aaff, #a5ddff);
+    box-shadow: 0 20px 45px rgba(130, 90, 170, 0.15);
+    animation: float 4s ease-in-out infinite;
+}
+
+.culture-sticker {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 20px;
+    font-size: 35px;
+    box-shadow: 0 8px 20px rgba(100, 60, 120, 0.1);
+}
+
+.sticker-one {
+    top: 20px;
+    left: 20px;
+}
+
+.sticker-two {
+    top: 30px;
+    right: 10px;
+}
+
+.sticker-three {
+    bottom: 30px;
+    left: 25px;
+}
+
+.sticker-four {
+    bottom: 15px;
+    right: 20px;
+}
+
+
+/* ========================================
+   SIKÇA SORULAN SORULAR
+======================================== */
+
+.faq-section {
+    padding: 100px 8%;
+    background: white;
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-list details {
+    background: #fff8fd;
+    border: 1px solid #f1e7f3;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    transition: 0.3s;
+}
+
+.faq-list details[open] {
+    background: #f7f0ff;
+    border-color: #e7d5ff;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    color: #654878;
+    font-weight: bold;
+    font-size: 15px;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: "+";
+    float: right;
+    color: #d75b9f;
+    font-size: 22px;
+}
+
+.faq-list details[open] summary::after {
+    content: "−";
+}
+
+.faq-list details p {
+    margin-top: 15px;
+    color: #8c7f94;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   SON ÇAĞRI ALANI
+======================================== */
+
+.final-banner {
+    padding: 85px 8%;
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 20%, #ff9fd1, transparent 25%),
+        radial-gradient(circle at 90% 80%, #9d8aff, transparent 30%),
+        linear-gradient(120deg, #ee76bd, #a779ee, #6cb9ed);
+    color: white;
+}
+
+.final-banner-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.final-banner-content > span {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.2);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.final-banner h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 17px;
+}
+
+.final-banner p {
+    line-height: 1.8;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+}
+
+.final-button {
+    display: inline-block;
+    margin-top: 28px;
+    background: white;
+    color: #a34fae;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.final-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(80, 40, 120, 0.2);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    background: #29213d;
+    color: white;
+    padding: 75px 7% 25px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+    gap: 35px;
+    padding-bottom: 55px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ff8ac8;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: #b89aff;
+}
+
+.footer-about > p {
+    color: #b9abc9;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: #443453;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #a86cce;
+    transform: translateY(-5px);
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #ffacd7;
+}
+
+.footer-column a {
+    display: block;
+    color: #c0b4ce;
+    font-size: 12px;
+    margin-bottom: 13px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-note {
+    background: #382b4b;
+    border: 1px solid #554064;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.footer-cat {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.footer-note h3 {
+    color: #ffacd7;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-note p {
+    color: #c5b8d0;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.footer-top-button {
+    display: inline-block;
+    padding: 10px 13px;
+    background: linear-gradient(120deg, #ee6caf, #9873eb);
+    color: white;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-top-button:hover {
+    transform: translateY(-3px);
+}
+
+.footer-rainbow {
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    background: linear-gradient(
+        90deg,
+        #ff6b9d,
+        #ffb56b,
+        #ffe66b,
+        #7be4a8,
+        #69c8ff,
+        #a58aff,
+        #e88bdf
+    );
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #a99bb8;
+    font-size: 11px;
+}
+
+
+/* ========================================
+   RESPONSIVE TASARIM
+======================================== */
+
+@media (max-width: 1150px) {
+    .main-menu {
+        gap: 11px;
+    }
+
+    .main-menu a {
+        font-size: 11px;
+    }
+
+    .anime-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .site-header {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .main-menu {
+        gap: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 70px 7%;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-content > p {
+        margin: auto;
+    }
+
+    .hero-buttons,
+    .hero-small-info {
+        justify-content: center;
+    }
+
+    .hero-decoration {
+        min-height: 300px;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .more-anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .culture-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .culture-art {
+        min-height: 300px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .main-menu {
+        gap: 10px;
+    }
+
+    .main-menu a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 5%;
+    }
+
+    .stat-box {
+        padding: 20px 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .category-card {
+        padding: 22px 10px;
+    }
+
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .anime-poster {
+        height: 230px;
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .more-anime-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .genre-list {
+        grid-template-columns: 1fr;
+    }
+
+    .genre-item {
+        padding: 18px;
+    }
+
+    .info-panel {
+        padding: 25px;
+    }
+
+    .info-panel h2 {
+        font-size: 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-footer {
+        padding: 55px 7% 25px;
+    }
+
+    .culture-circle {
+        width: 200px;
+        height: 200px;
+        font-size: 85px;
+    }
+}
+
+
+/* ========================================
+   SEÇİM VE KAYDIRMA
+======================================== */
+
+::selection {
+    background: #f6a4d3;
+    color: white;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+:focus-visible {
+    outline: 3px solid #b28aff;
+    outline-offset: 4px;
+}
+
+
+/* ========================================
+   HAREKETİ AZALTMA TERCİHİ
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
